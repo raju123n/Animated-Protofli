@@ -1,0 +1,191 @@
+ @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&family=Honk&family=Protest+Riot&display=swap');
+
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+}
+.logo {
+    height: 100px;
+    text-align: left;
+    margin: 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbar-left {
+    padding: 50px;
+    width: 50vw;
+}
+.navbar-right {
+    display: inline-block;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(73, 160, 160);
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+}
+.navbar-right:hover {
+    color: white;
+
+}
+.nav-img {
+    padding-right: 50px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+}
+.nav-img:hover {
+    
+    transform: scale(1.05);
+}
+.a-element {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+}
+
+.home-left {
+    width:50vw;
+    padding: 20px;
+    text-align: right;
+    padding-left: 200px;
+    
+}
+.home-right {
+    width: 50vw;
+    padding-right: 200ox;
+    padding-left: 100px;
+}
+.home-h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-right: 30px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+    
+}
+.home-p {
+    font-style: calibri;
+    font-size: 20px;
+    word-spacing: 5px;
+    padding-right: 30px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+}
+.services {
+    padding: 50px;
+    text-align: center;
+}
+.ser-h1 {
+    font-family: 'Protest Riot', sans-serif;
+    color: rgb(54, 170, 54);
+    letter-spacing: 2px;
+
+}
+.services-sub-cont {
+    display: flex;
+    flex-direction: row;
+
+}
+.services-card {
+    border: 2px rgb(50, 190, 50) solid;
+    margin: 20px;
+    width: 400px;
+    padding: 20px;
+}
+.ser-sub-head {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.sub-p {
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    text-align: center;
+}
+.rank-p {
+    color: pink;
+}
+.contact {
+    text-align: center;
+}
+.contact-info {
+    font-family: 'Encode Sans', sans-serif;
+}
+.social-icon-img {
+    height: 50px;
+    padding: 15px;
+}
+.cont-p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    word-spacing: 5px;
+    font-size: 20px;
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translatey(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translatey(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translatey(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes  floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
